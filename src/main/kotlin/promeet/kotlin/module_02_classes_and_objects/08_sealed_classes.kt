@@ -5,7 +5,7 @@ sealed class Option<out T> {
 	object None : Option<Nothing>()
 }
 
-// alternate syntax
+// alternative syntax
 sealed class Option2<out T>
 data class Some<out T>(val value: T) : Option2<T>()
 object None : Option2<Nothing>()

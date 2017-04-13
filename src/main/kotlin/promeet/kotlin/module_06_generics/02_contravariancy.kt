@@ -10,8 +10,8 @@ private interface TrashBin<in T> {
 }
 
 private fun demo(trashBin: TrashBin<Item>) {
-	trashBin.put(Item.Bottle()) // just as in Java
-	trashBin.put(Item.Can()) // just as in Java
+	trashBin.put(Item.Bottle())
+	trashBin.put(Item.Can())
 	
 	val trashBinForBottles: TrashBin<Item.Bottle> = trashBin
 	trashBinForBottles.put(Item.Bottle())
