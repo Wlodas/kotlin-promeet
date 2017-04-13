@@ -3,7 +3,6 @@ package promeet.kotlin.module_01_basics
 fun main(args: Array<String>) {
 	val value : Any = "1234"
 	val nullableValue : Any? = null
-	val nullableInt : Int? = 777
 	
 	if (value is String) {
 		println(value.length) // smart cast

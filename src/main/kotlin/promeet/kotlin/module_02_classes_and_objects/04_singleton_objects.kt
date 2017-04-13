@@ -12,7 +12,7 @@ private class ParentClass {
 	fun megaBytesToBytes(megaBytes: Int) = BYTES_PER_MEGABYTE * megaBytes
 }
 
-private interface Factory<T> {
+private interface Factory<out T> {
 	fun create(): T
 }
 
@@ -28,4 +28,7 @@ fun main(args: Array<String>) {
 	println(ParentClass().megaBytesToBytes(megaBytes = 1))
 	
 	MyClass.create()
+	// or
+	val factory: Factory<MyClass> = MyClass.Companion
+	factory.create()
 }

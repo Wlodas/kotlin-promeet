@@ -2,7 +2,7 @@ package promeet.kotlin.module_05_collections
 
 fun main(args: Array<String>) {
 	// lists
-	val immutableList = intListOf(1, 2, 3, 4)
+	val immutableList = listOf(1, 2, 3, 4)
 	
 	val mutableList = mutableListOf(1, 2, 3, 4)
 	mutableList[0] = 0
