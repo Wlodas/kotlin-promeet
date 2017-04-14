@@ -28,9 +28,11 @@ private class DelegatingDTO(map: Map<String, Any?>) {
 	}
 }
 
-private fun <T> PropertyChangeSupport.createProperty(initialValue: T): ReadWriteProperty<Any?, T> = object : ObservableProperty<T>(initialValue) {
-	override fun afterChange(property: KProperty<*>, oldValue: T, newValue: T) {
-		this@createProperty.firePropertyChange(property.name, oldValue, newValue)
+private fun <T> PropertyChangeSupport.createProperty(initialValue: T): ReadWriteProperty<Any?, T> {
+	return object : ObservableProperty<T>(initialValue) {
+		override fun afterChange(property: KProperty<*>, oldValue: T, newValue: T) {
+			this@createProperty.firePropertyChange(property.name, oldValue, newValue)
+		}
 	}
 }
 
