@@ -1,10 +1,9 @@
 package promeet.kotlin.module_05_collections
 
 fun main(args: Array<String>) {
-	val numbers = (1..10) /* .toList() */
+	val numbers = (1..10)
 	
-	// lazy evaluation
-	val evenNumbers = numbers.asSequence().filter {
+	val evenNumbers = numbers.asSequence().filter { // evaluated later
 		if (it % 2 == 0) {
 			println(it)
 			true
@@ -28,4 +27,6 @@ fun main(args: Array<String>) {
 	// generate sequence
 	val numbersFromOneToTen = generateSequence(seed = 1) { it + 1 }.take(10)
 	println(numbersFromOneToTen.toList())
+	
+	// more sophisticated generation method will be shown in coroutines module ;)
 }

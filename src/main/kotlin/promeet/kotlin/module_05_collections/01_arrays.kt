@@ -4,6 +4,9 @@ fun main(args: Array<String>) {
 	val array = arrayOf(1, 2, 3, 4) // Integer[]
 	println(array.contentToString())
 	
+	val emptyArray = emptyArray<Int>() // Integer[], shortcut for arrayOf<Int>()
+	println(emptyArray.contentToString())
+	
 	val arrayWithNulls = arrayOf(1, 2, 3, 4, null) // Integer[]
 	println(arrayWithNulls.contentToString())
 	

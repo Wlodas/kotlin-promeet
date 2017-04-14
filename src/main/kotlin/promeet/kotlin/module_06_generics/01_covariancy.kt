@@ -1,9 +1,12 @@
 package promeet.kotlin.module_06_generics
 
-private interface MyIterable<out T> {
+private interface MyIterator<out T> {
 	fun next(): T
 }
 
-private fun demo(itr: MyIterable<String>) {
-	val objects: MyIterable<Any> = itr // OK, since T is an out-parameter
+private fun demo(stringIterator: MyIterator<String>) {
+	val nextString = stringIterator.next()
+	
+	val anyIterator: MyIterator<Any> = stringIterator // OK, since T is an out-parameter
+	val nextAnyElement = anyIterator.next()
 }

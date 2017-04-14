@@ -1,11 +1,15 @@
 package promeet.kotlin.module_01_basics
 
 fun main(args: Array<String>) {
-	val value : Any = "1234"
+	val value : Any? = "1234"
 	val nullableValue : Any? = null
 	
 	if (value is String) {
 		println(value.length) // smart cast
+	}
+	
+	if (value is String?) {
+		println(value?.length ?: 0) // smart cast
 	}
 	
 	if (value !is String) {

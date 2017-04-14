@@ -4,7 +4,7 @@ import kotlin.coroutines.experimental.buildSequence
 
 fun main(args: Array<String>) {
 	val primeNumbersGenerator = buildSequence {
-		for (i in 1..Integer.MAX_VALUE) {
+		for (i in 2..Int.MAX_VALUE) {
 			var counter = 0
 			var num = i
 			while (num >= 1) {

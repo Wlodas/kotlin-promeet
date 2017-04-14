@@ -3,7 +3,7 @@ package promeet.kotlin.module_07_java_interop;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class _01_SomeJavaClass {
+public class SomeJavaClass {
 	public String platformMethod() {
 		return null;
 	}

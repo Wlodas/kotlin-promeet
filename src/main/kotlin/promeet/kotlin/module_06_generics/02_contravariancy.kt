@@ -6,7 +6,7 @@ sealed class Item {
 }
 
 private interface TrashBin<in T> {
-	fun put(item: T): Int // we can only put items and nothing else
+	fun put(item: T): Int
 }
 
 private fun demo(trashBin: TrashBin<Item>) {
