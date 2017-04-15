@@ -12,11 +12,9 @@ fun main(args: Array<String>) {
 	if (someCondition1) {
 		println("branch 1:")
 		println(lazyValue)
-	} else {
-		// some code
-		if (someCondition2) {
-			println("branch 2:")
-			println(lazyValue)
-		}
+	}
+	if (someCondition2) {
+		println("branch 2:")
+		println(lazyValue)
 	}
 }
