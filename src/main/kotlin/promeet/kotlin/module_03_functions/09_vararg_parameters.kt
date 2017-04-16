@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
 	
 	val intArray = intArrayOf(1, 2, 3)
 //	val container = IntArrayContainer(intArray) // doesn't compile
-	val container = IntArrayContainer(*intArray) // required spread operator
+	val container = IntArrayContainer(*intArray) // require spread operator
 	
 	for ((index, number) in intArray.withIndex()) {
 		intArray[index] = number * number
