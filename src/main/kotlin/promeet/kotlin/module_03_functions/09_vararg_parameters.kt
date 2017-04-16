@@ -1,8 +1,6 @@
 package promeet.kotlin.module_03_functions
 
-private class IntArrayContainer(vararg private val numbers: Int) {
-	override fun toString() = numbers.contentToString()
-}
+private class IntArrayContainer(vararg val numbers: Int)
 
 fun main(args: Array<String>) {
 	IntArrayContainer(1, 2, 3)
@@ -16,5 +14,5 @@ fun main(args: Array<String>) {
 	}
 	
 	println(intArray.contentToString())
-	println(container)
+	println(container.numbers.contentToString())
 }
