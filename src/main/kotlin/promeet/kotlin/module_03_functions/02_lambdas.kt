@@ -16,6 +16,8 @@ fun main(args: Array<String>) {
 	// passing functions as parameter
 	listOf(1, 2, 3).filter({ n: Int -> n % 2 == 0 })
 	
+	listOf(1, 2, 3).filter() { n: Int -> n % 2 == 0 }
+	
 	listOf(1, 2, 3).filter { n: Int -> n % 2 == 0 }
 	
 	listOf(1, 2, 3).filter { n -> n % 2 == 0 }
