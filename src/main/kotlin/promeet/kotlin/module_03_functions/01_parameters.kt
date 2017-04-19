@@ -1,6 +1,6 @@
 package promeet.kotlin.module_03_functions
 
-//@JvmOverloads // creates 2 methods from Java perspective
+//@JvmOverloads // creates 2 overloaded methods from Java perspective
 private fun formatNumber(number: Double, decimalDigits: Int = 2) = "%.${decimalDigits}f".format(number)
 
 fun main(args: Array<String>) {
