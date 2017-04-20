@@ -25,4 +25,10 @@ fun main(args: Array<String>) {
 		// or
 //		else -> 0
 	}
+	
+	val nullString : String? = null
+	when (nullString) { // try this on Java's switch construct ;)
+		"value" -> println("$nullString (length: ${nullString.length})")
+		else -> println("is null")
+	}
 }
