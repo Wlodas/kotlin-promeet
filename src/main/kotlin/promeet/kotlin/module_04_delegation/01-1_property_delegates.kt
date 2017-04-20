@@ -28,22 +28,6 @@ private class DelegatingDTO(map: Map<String, Any?>) {
 	}
 }
 
-private fun <T> PropertyChangeSupport.createProperty(initialValue: T): ReadWriteProperty<Any?, T> {
-	return object : ObservableProperty<T>(initialValue) {
-		override fun afterChange(property: KProperty<*>, oldValue: T, newValue: T) {
-			this@createProperty.firePropertyChange(property.name, oldValue, newValue)
-		}
-	}
-}
-
-private class ActiveModelDTO {
-	val propertyChangeSupport = PropertyChangeSupport(this)
-	
-	var property1: String by propertyChangeSupport.createProperty("initial String")
-	
-	var property2: Int? by propertyChangeSupport.createProperty(null)
-}
-
 fun main(args: Array<String>) {
 	val dto = DelegatingDTO(mapOf("mapVal" to "value from the map"))
 	
@@ -61,11 +45,4 @@ fun main(args: Array<String>) {
 	println(dto.evenNumber)
 	dto.evenNumber = 3
 	println(dto.evenNumber)
-	
-	val activeModelDTO = ActiveModelDTO()
-	activeModelDTO.propertyChangeSupport.addPropertyChangeListener { event ->
-		println("Property '${event.propertyName}' changed value from '${event.oldValue}' to '${event.newValue}'.")
-	}
-	activeModelDTO.property1 = "new string"
-	activeModelDTO.property2 = 1
 }

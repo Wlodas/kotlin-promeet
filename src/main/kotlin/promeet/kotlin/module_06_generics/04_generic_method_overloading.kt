@@ -1,4 +1,4 @@
-package promeet.kotlin.module_09_others
+package promeet.kotlin.module_06_generics
 
 @JvmName("handleInts")
 private fun handle(list: List<Int>) {

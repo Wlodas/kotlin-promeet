@@ -4,7 +4,7 @@ import java.math.BigInteger
 
 private inline fun Int.toBigInteger(): BigInteger = BigInteger.valueOf(this.toLong())
 
-private inline fun <T : Any> mySynchronized(mutex: T, body: T.() -> Unit) {
+private inline fun <T : Any> mySynchronized(mutex: T, body: T.() -> Unit) { // anonymous extension function
 	synchronized(mutex) {
 		mutex.body()
 		// or
